@@ -1,3 +1,4 @@
 *ref/
 oldCV.pdf
 *.gz
+.DS_Store
