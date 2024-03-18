@@ -1,0 +1,357 @@
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+% Resume in Latex
+% Author : Shubham Mazumder
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{soul}
+\input{glyphtounicode}
+%\usepackage[margin=0.5in]{geometry}
+\usepackage[lmargin=0.5in, rmargin=0.5in, tmargin=0.15in, bmargin=0.25in]{geometry}
+
+%----------FONT OPTIONS----------
+% Sans-serif Fonts
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault,light]{inter}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage{roboto}
+% \usepackage[sfdefault,medium]{InriaSans}
+\usepackage[default]{sourcesanspro}
+
+% Serif Fonts
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% -------------------------------------
+%----------PAGE SETUP------------------
+% -------------------------------------
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{0.5pt}
+% \addtolength{\evensidemargin}{0.5pt}
+% \addtolength{\textwidth}{0.9in}
+% \addtolength{\topmargin}{-0.6in}
+% \addtolength{\textheight}{1.6in}
+
+% \addtolength{\oddsidemargin}{-.875in}
+% \addtolength{\evensidemargin}{-.875in}
+% \addtolength{\textwidth}{1.75in}
+% \addtolength{\topmargin}{-.875in}
+% \addtolength{\textheight}{1.75in}
+
+% URL style
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{+0pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% ----------- Definitions -----------------------
+\def\spaceforrole{ }
+\definecolor{lightyellow}{cmyk}{0.00, 0.05, 0.20, 0.00} % Highlights
+\sethlcolor{lightyellow} % Highlights
+
+\def\spaceforrole{ }
+\definecolor{DukeBlue}{RGB}{0, 83, 155} % Highlights
+\sethlcolor{DukeBlue} % Highlights
+
+%--------------- Custom commands -----------------------
+
+% Resume Item
+\newcommand{\HL}[1]{
+  \textbf{\textcolor{DukeBlue}{#1}}
+}
+
+\newcommand{\namespace}{
+\vspace{3pt}
+}
+
+\newcommand{\sectionspace}{
+\vspace{-20pt}
+}
+
+\newcommand{\subheadingtitlevspace}{
+\vspace{-3pt}
+}
+
+% Resume Item
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+% Titles
+\newcommand{\titleItem}[1]{
+  % \textsl{\textbf{#1}}
+  \textbf{#1}
+}
+
+
+% Highlighting
+\newcommand{\highlight}[1]{
+  \textsl{\textbf{#1}}
+  % \hl{\textsl{\textbf{#1}}}
+  % \textbf{#1}
+  % \textsl{\hl{#1}}
+}
+
+% Resume Subheading
+%\newcommand{\resumeSubheading}[4]{
+%  \item
+%     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}l@{}l}     
+%      \titleItem{#1} & {#3} | {#2} & \textit{#4}\\
+%    \end{tabular*}\vspace{-10pt}
+%}
+
+ \newcommand{\resumeSubheading}[4]{
+   \item
+     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+       \textbf{#1} | \emph{#2} & \textit{#4}\\
+       \textit{#3} \\
+     \end{tabular*}\vspace{-8pt}
+ }
+
+
+% Resume Sub-sub heading
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+% Resume Project Heading
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textit{ #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+%Resume Subheading List
+\newcommand{\resumeSubHeadingListStart}{\subheadingtitlevspace\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%Resume Item List
+\newcommand{\resumeItemListStart}{
+% \vspace{-1pt}
+\begin{itemize}}
+\newcommand{\resumeItemListEnd}{
+% \vspace{-6pt}
+\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+\begin{center}
+    \textbf{\huge{\center Jen-Hung (Tom) Chang }} \\
+    \namespace
+    \href{https://personal-website}{{\textit{@personal website}}} $|$
+    \href{mailto:tom.jenhungchang@gmail.com}{{\textit{@gmail}}} $|$ 
+    \href{https://linkedin.com/in/JenhungChang}{{\textit{@linkedin}}} $|$
+    \href{https://github.com/tom89622}{{\textit{@github}}}
+    \vspace{-8pt}
+\end{center}
+% -------------------------------------
+%---------- PROFESSIONAL SUMMARY ------
+% -------------------------------------
+
+% \section{Professional Summary}
+% \vspace{-3pt}
+% \begin{itemize}[leftmargin=0.15in, label={}]
+%     {\item{
+%      {Versatile developer with a Master's in Computer Science, distinguished for collaborative skills and a track record of independently delivering impactful results. Ample experience in full-stack development, delivering well-documented, tested, and operable code. Efficient in collaborating and communicating new ideas and opinions.} \\      
+%     }}
+%  \end{itemize}
+%  \sectionspace
+
+% -------------------------------------
+%----------EDUCATION-------------------
+% -------------------------------------
+
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {University of Utah}{Salt Lake City, UT}
+%       {MS in Computer Science | GPA: 3.86}{January 2021 -- December 2023} 
+%     \resumeSubheading
+%       {SRM University}{Chennai, TN, India}
+%       {Bachelor of Technology in Computer Science and Engineering | GPA: 3.4}{August 2012 -- May 2016}
+%   \resumeSubHeadingListEnd
+% \vspace{-12pt}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Duke University} {Durham, NC}
+      {M.Eng. in Electrical and Computer Engineering {(Expected graduate 2026 Spring)}} 
+      {Sept. 2024 -- Present}
+    \resumeSubheading
+      {Chung-Yuan Christian University} {Taoyuan, Taiwan}
+      {B.S. in Information and Computer Engineering} 
+      {Sept. 2018 -- June 2022}
+    \resumeItemListStart
+      \resumeItem{Overall GPA: 3.9/4.0, ranking 10/119}
+      \resumeItem{Awards: Certificate of Holistic Honorary Award (only 50 people in one year), Independent Study Competition (Third place)}
+    \resumeItem{Relevant Coursework: Data Structures and Algorithms, Object Oriented Programming, Analysis of Algorithm, Programming Language, Operating System, Linux Operating System Practices, Intro. to Data Mining, Network Security, Computer Graphics} 
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+   
+% -------------------------------------
+%----------EXPERIENCE------------------
+% -------------------------------------
+
+\section{Work Experience}
+  \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\titleItem{{Software Engineer}} $|$ \emph{RealPlus Technology, Taoyuan, Taiwan}}{June 2022 -- Present}
+      \resumeItemListStart
+        \resumeItem{Designed a data pipeline among devices \HL{under ROS} (Robot Operating System) on Jetson Nano }
+        \resumeItem{Enhanced flexibility for secondary development by designing APIs to support variable modes in self-driving car project }
+        \resumeItem{\HL{Increased} lane tracking \HL{accuracy by 20\%} through the integration of Gaussian blur and a lane prediction algorithm}
+      \resumeItemListEnd
+
+
+    \resumeProjectHeading
+        {\titleItem{{Software Engineer Intern}} $|$ \emph{Innovati Inc., Hsinchu, Taiwan}}{June 2018 - Sept. 2018}
+      \resumeItemListStart
+        \resumeItem{\HL{Reduced 10\% error} probability by optimizing libraries code for the control board using C and Assembly}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% -------------------------------------
+%----------PROJECTS--------------------
+% -------------------------------------
+
+ \section{Projects}    
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\titleItem{Using Action Recognition to Crack reCAPTCHA} $|$ \emph{Python, Computer Vision, Machine Learning}}{Sept. 2020 -- Dec. 2021}
+        \resumeItemListStart
+        \resumeItem{IDesigned a defense strategy to distinguish between machines and humans when using reCAPTCHA with action}
+        \resumeItem{Generated and classified cropped pictures by designing Machine Learning models using \HL{transform learning}\&\HL{Grad-CAM}}
+        \resumeItem{Achieved \HL{accuracies of 98\%, 60\%, and 65\%} for 3 classifications under our best defense approach }
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\titleItem{OurScheme Interpreter} $|$ \emph{C/C++, Programming Language}}{Feb. 2021 -- June 2021}
+        \resumeItemListStart
+        \resumeItem{Implemented parser and scanner by tree-based structure and \HL{20 Scheme instructions} using C++} 
+        \resumeItem{Handled syntax error and run-time error (no return value and unbound) from \HL{thousands of inputs}}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\titleItem{FRANCIS Compiler} $|$ \emph{C/C++, \HL{Compiler}}}{Sept. 2020 -- Jan. 2021}
+        \resumeItemListStart
+        \resumeItem{Designed a compiler for FRANCIS, a high-level language similar to FORTRAN}
+        \resumeItem{Implemented a Lexical Analysis and Syntax Analysis}
+        \resumeItem{Generated Intermediate Code by generating 7 tables to address and record identifiers and arrays}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+% -------------------------------------
+%----------Extracurricular Activities--------------------
+% -------------------------------------
+
+ \section{Extracurricular Activities}    % may not be used in career version
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\titleItem{Pattern Recognition Lab} $|$ \emph{Participant}}{June 2020 -- Dec. 2021}
+      \resumeItemListStart
+      \resumeItem{ Participated in Using Action Recognition to Crack reCAPTCHA plan, ranked \HL{third place} out of our department}
+      \resumeItem{Built the training environment in \HL{Docker}, \HL{improving} training efficiency by \HL{40\%}}
+      \resumeItem{Qualified with the application for the Undergraduate Research Fellowship authorized by the Taiwanese government}
+      \resumeItemListEnd
+    % \resumeProjectHeading
+    %   {\titleItem{ICE Department Student Association} $|$ \emph{Vice President}}{June 2020 -- June 2021}
+    %   \resumeItemListStart
+    %   \resumeItem{Led our association with \HL{300+ members} to get \HL{second place} among national college clubs} 
+    %   \resumeItem{Participated in a government-sponsored community service program to teach programming using Scratch for rural primary students}
+    %   \resumeItemListEnd        
+    \resumeProjectHeading
+      {\titleItem{Taiwan Sustainable Campus Project} $|$ \emph{Participant}}{June 2019 -- June 2020}
+      \resumeItemListStart
+      \resumeItem{ Participated in a Taiwanese government project focused on achieving Sustainable Development Goals}
+      \resumeItem{Revamped database to enhance the accuracy of hitting information by \HL{20\%} and security of website’s authority using \HL{SQL}}
+      \resumeItem{Developed and implemented a new pop-out announcement feature on the website using \HL{JavaScript} and \HL{HTML}, enhancing user communication capabilities}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+%
+%\section{Awards}
+%    \resumeSubHeadingListStart
+%      \resumeProjectHeading
+%          {\titleItem{Independent Study Competition}, \emph{ $$  Third place}}{Dec. 2021}
+%      \resumeProjectHeading
+%          {\titleItem{Certificate of Holistic Honorary Award} \emph{( an award for achievement of academy \& leadership )}}{Dec. 2021}
+%      \resumeProjectHeading
+%          {\titleItem{Academic Excellence Award} \emph{( a scholarship for 5\% of students in the academy )}}{Jan. 2018 \& June 2019}
+%    \resumeSubHeadingListEnd
+    
+% -------------------------------------
+%----------TECHNICAL SKILLS------------
+% -------------------------------------
+
+\section{Technical Skills}
+\subheadingtitlevspace
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+      \titleItem{Programming Languages}{: C/C++, Java, Python, JavaScript, Bash, Shell Scripts, R, MySQL, JSON, HTML, CSS, Verilog, Assembly(ARM, x86)} \\
+      \titleItem{Libraries and Environment}{: Pytorch, Tensorflow, OpenCV, OpenGL, WebGL, Node.js, React} \\
+      \titleItem{DevOps and API Tools}{: Git, Docker, REST} \\
+      % \titleItem{Cloud and Security Tools}{: IBM Cloud, AWS, Azure Cloud, SQL Server, SSIS, SSRS, Linux (Configuring and Managing)} \\
+      % \titleItem{Others}{: Data Modeling, Agile (Scrum/Kanban), SOLID, Design Patterns,  Debugging, Root Cause Analysis}
+    }}
+ \end{itemize}
+\sectionspace
+
+
+
+%-------------------------------------------
+\end{document}
