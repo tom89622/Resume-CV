@@ -24,8 +24,8 @@
 \usepackage{amsmath}
 \usepackage{soul}
 \input{glyphtounicode}
-\usepackage[margin=0.5in]{geometry}
-% \usepackage[lmargin=0.5in, rmargin=0.5in, tmargin=0.15in, bmargin=0.25in]{geometry}
+% \usepackage[margin=0.5in]{geometry}
+\usepackage[lmargin=0.5in, rmargin=0.5in, tmargin=0.1in, bmargin=0in]{geometry}
 
 %----------FONT OPTIONS----------
 % Sans-serif Fonts
@@ -74,7 +74,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{0pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -111,7 +111,7 @@
 % Resume Item
 \newcommand{\resumeItem}[1]{
   \item{
-    {#1 \vspace{-4pt}}
+    {#1}\vspace{-4pt}
   }
 }
 
@@ -160,7 +160,7 @@
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       #1 & \textit{ #2} \\
-    \end{tabular*}\vspace{-9pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
 %Resume Subheading List
