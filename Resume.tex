@@ -24,8 +24,8 @@
 \usepackage{amsmath}
 \usepackage{soul}
 \input{glyphtounicode}
-%\usepackage[margin=0.5in]{geometry}
-\usepackage[lmargin=0.5in, rmargin=0.5in, tmargin=0.15in, bmargin=0.25in]{geometry}
+\usepackage[margin=0.5in]{geometry}
+% \usepackage[lmargin=0.5in, rmargin=0.5in, tmargin=0.15in, bmargin=0.25in]{geometry}
 
 %----------FONT OPTIONS----------
 % Sans-serif Fonts
@@ -193,6 +193,8 @@
     \href{https://github.com/tom89622}{{\textit{@github}}}
     \vspace{-8pt}
 \end{center}
+
+
 % -------------------------------------
 %---------- PROFESSIONAL SUMMARY ------
 % -------------------------------------
@@ -214,11 +216,12 @@
 \subheadingtitlevspace
   \begin{itemize}[leftmargin=0.15in, label={}]
     {\item{
-      \titleItem{Programming Languages}{: C/C++, Java, Python, JavaScript, Bash, Shell Scripts, R, MySQL, JSON, HTML, CSS, Verilog, Assembly(ARM, x86)} \\
+      \titleItem{Programming Languages}{: C, C++, Java, Python, JavaScript, R, MySQL, JSON, HTML, CSS, Verilog, ARM Assembly} \\
+      % Bash, Shell Scripts,
       \titleItem{Libraries and Environment}{: Pytorch, Tensorflow, OpenCV, OpenGL, WebGL, Node.js, React} \\
-      \titleItem{DevOps and API Tools}{: Git, Docker, REST} \\
+      \titleItem{DevOps and Tools}{: Git, Docker, AWS (Lightsail, Route 53, Cloudfront), GNU debugger (GDB), REST API} \\
       % \titleItem{Cloud and Security Tools}{: IBM Cloud, AWS, Azure Cloud, SQL Server, SSIS, SSRS, Linux (Configuring and Managing)} \\
-      \titleItem{Others}{: AWS (Lightsail, Route 53, Cloudfront), GNU debugger (GDB)}
+      % \titleItem{Others}{: }
     }}
   \end{itemize}
 \sectionspace
@@ -258,7 +261,10 @@
       \resumeItem{Overall GPA: 3.9/4.0, ranking 10/119}
       \resumeItem{Awards: Certificate of Holistic Honorary Award (only 50 people in one year)}
       %, Independent Study Competition (Third place)
-      \resumeItem{Relevant Coursework: Data Structures and Algorithms, Object Oriented Programming, Analysis of Algorithm, Programming Language, Operating System, Linux Operating System Practices, Intro. to Data Mining, Network Security, Computer Graphics} 
+      \resumeItem{Major Coursework: Data Structures and Algorithms, Object Oriented Programming, Software Engineering, System Programming, 
+                  Analysis of Algorithm, Programming Language, Computer Organization, Operating System, Linux Operating System Practices, 
+                  Intro. to Data Mining, Network Security, Computer Graphics} 
+      % for keyword detection            
     \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -279,15 +285,15 @@
     \resumeProjectHeading
       {\titleItem{{Student Researcher}}$|$ \emph{Pattern Recognition Lab}}{June 2020 -- Dec. 2021}
     \resumeItemListStart
-      \resumeItem{Participated in Using Action Recognition to Crack reCAPTCHA plan, ranked \HL{third place} out of our department}
+      \resumeItem{Produced in Using Action Recognition to Crack reCAPTCHA plan, ranked \HL{third place} out of our department}
       \resumeItem{Built the training environment in \HL{Docker}, \HL{improving} training efficiency by \HL{40\%}}
       \resumeItem{Qualified with the application fors Undergraduate Research Fellowship authorized by Taiwanese government}
     \resumeItemListEnd
     \resumeProjectHeading
       {\titleItem{{Full-Stack Software Engineer Intern}}$|$ \emph{Taiwan Sustainable Campus Project} }{June 2019 -- June 2020}
     \resumeItemListStart
-      \resumeItem{Participated in Taiwanese government project focused on achieving Sustainable Development Goals}
-      \resumeItem{Revamped database to enhance the accuracy of hitting information by \HL{20\%} and security of website’s authority using \HL{SQL}}
+      \resumeItem{Contributed in Taiwanese government project focused on achieving Sustainable Development Goals}
+      \resumeItem{Revamped database to \HL{enhance the accuracy} of hitting information by \HL{20\%} and security of website’s authority using \HL{SQL}}
       \resumeItem{Developed and implemented new pop-out announcement feature on website using \HL{JavaScript} and \HL{HTML}, enhancing user communication capabilities}
     \resumeItemListEnd
   % \resumeProjectHeading
@@ -297,6 +303,7 @@
   %   \resumeItemListEnd
   \resumeSubHeadingListEnd
 
+
 % -------------------------------------
 %----------PROJECTS--------------------
 % -------------------------------------
@@ -304,11 +311,18 @@
  \section{Selective Projects}    
   \resumeSubHeadingListStart
     \resumeProjectHeading
+      {\titleItem{Personal Website} $|$ \emph{JavaScript, HTML, CSS, React, REST API, AWS (Lightsail, Route 53, Cloudfront)}}{March 2024}
+      \resumeItemListStart
+        \resumeItem{Constructed and deployed a React website on \HL{AWS Lightsail} for a cost-effective and scalable infrastructure}
+        \resumeItem{Implemented dynamic GitHub repositories update using React components via callig \HL{REST API} with Axios}
+        \resumeItem{Developed a user-friendly contact form with form validation to facilitate communication via EmailJS}
+      \resumeItemListEnd
+    \resumeProjectHeading
       {\titleItem{Using Action Recognition to Crack reCAPTCHA} $|$ \emph{Python, Computer Vision, Machine Learning}}{Sept. 2020 -- Dec. 2021}
       \resumeItemListStart
         \resumeItem{Designed defense strategy to distinguish between machines and humans when using reCAPTCHA with action}
         \resumeItem{Generated and classified cropped pictures by designing Machine Learning models using \HL{Transform Learning}\&\HL{Grad-CAM}}
-        \resumeItem{Achieved \HL{accuracies of 98\%, 60\%, and 65\%} for 3 classifications under our best defense approach }
+        \resumeItem{Achieved \HL{accuracies of 98\%, 60\%, and 65\%} for 3 classifications under our best defense approach}
       \resumeItemListEnd
     \resumeProjectHeading
       {\titleItem{OurScheme Interpreter} $|$ \emph{C/C++, Programming Language}}{Feb. 2021 -- June 2021}
