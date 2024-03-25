@@ -155,22 +155,31 @@
     \end{tabular*}\vspace{-2pt}
 }
 
+% Resume Exp Heading
+\newcommand{\resumeExpHeading}[4]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \titleItem{#1} & \textit{ #2} \\
+      \textit{#3} & \textit{ #4}
+    \end{tabular*}\vspace{-8pt}
+}
+
 % Resume Project Heading
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      #1 & \textit{ #2} \\
+      #1 & \textit{ #2}
     \end{tabular*}\vspace{-8pt}
 }
 
 %Resume Subheading List
-\newcommand{\resumeSubHeadingListStart}{\subheadingtitlevspace\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\subheadingtitlevspace\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 %Resume Item List
 \newcommand{\resumeItemListStart}{
 % \vspace{-1pt}
-\begin{itemize}}
+\begin{itemize}[label={$\bullet$}, labelsep=8pt, itemsep=4pt]}
 \newcommand{\resumeItemListEnd}{
 % \vspace{-6pt}
 \end{itemize}\vspace{-8pt}}
@@ -214,11 +223,11 @@
 
 \section{Technical Skills}
 \subheadingtitlevspace
-  \begin{itemize}[leftmargin=0.15in, label={}]
+  \begin{itemize}[leftmargin=0in, label={}]
     {\item{
       \titleItem{Programming Languages}{: C, C++, Java, Python, JavaScript, R, MySQL, JSON, HTML, CSS, Verilog, ARM Assembly} \\
       % Bash, Shell Scripts,
-      \titleItem{Libraries and Environment}{: Pytorch, Tensorflow, OpenCV, OpenGL, WebGL, Node.js, React} \\
+      \titleItem{Libraries and Environment}{: Pytorch, Tensorflow, CUDA, OpenCV, OpenGL, WebGL, Node.js, React} \\
       \titleItem{DevOps and Tools}{: Git, Docker, AWS (Lightsail, Route 53, Cloudfront), GNU debugger (GDB), REST API} \\
       % \titleItem{Cloud and Security Tools}{: IBM Cloud, AWS, Azure Cloud, SQL Server, SSIS, SSRS, Linux (Configuring and Managing)} \\
       % \titleItem{Others}{: }
@@ -246,26 +255,24 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Duke University}{Durham, NC}
-      {Master of Engineering candidate in Electrical and Computer Engineering} 
-      {Sept. 2024 -- Present} %(Expected graduate 2026 Spring)
-      % \resumeItemListStart
-      %   \resumeItem{Overall GPA: 3.9/4.0, ranking 10/119}
-      %   \resumeItem{Awards: Certificate of Holistic Honorary Award (only 50 people in one year), Independent Study Competition (Third place)}
-      %   \resumeItem{Relevant Coursework: Data Structures and Algorithms, Object Oriented Programming, Analysis of Algorithm, Programming Language, Operating System, Linux Operating System Practices, Intro. to Data Mining, Network Security, Computer Graphics} 
-      % \resumeItemListEnd
+      {Candidate for Master of Engineering in Electrical and Computer Engineering} 
+      {Expected Dec. 2026} %(Expected graduate 2026 Spring)
+      \resumeItemListStart
+        \resumeItem{Track: Software Engineering}
+      \resumeItemListEnd
     \resumeSubheading
       {Chung-Yuan Christian University} {Taoyuan, Taiwan}
       {Bachelor of Science in Information and Computer Engineering} 
-      {Sept. 2018 -- June 2022}
-    \resumeItemListStart
-      \resumeItem{Overall GPA: 3.9/4.0, ranking 10/119}
-      \resumeItem{Awards: Certificate of Holistic Honorary Award (only 50 people in one year)}
-      %, Independent Study Competition (Third place)
-      \resumeItem{Major Coursework: Data Structures and Algorithms, Object Oriented Programming, Software Engineering, System Programming, 
-                  Analysis of Algorithm, Programming Language, Computer Organization, Operating System, Linux Operating System Practices, 
-                  Intro. to Data Mining, Network Security, Computer Graphics} 
-      % for keyword detection            
-    \resumeItemListEnd
+      {June 2022}
+      \resumeItemListStart
+        \resumeItem{Overall GPA: 3.9/4.0, ranking 10/119}
+        \resumeItem{Awards: Certificate of Holistic Honorary Award (only 50 people in one year)}
+        %, Independent Study Competition (Third place)
+        \resumeItem{Major Coursework: Data Structures and Algorithms, Object Oriented Programming, Software Engineering, System Programming, 
+                    Analysis of Algorithm, Programming Language, Computer Organization, Operating System, Linux Operating System Practices, 
+                    Intro. to Data Mining, Network Security, Computer Graphics} 
+        % for keyword detection            
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
    
@@ -275,27 +282,28 @@
 
 \section{Professional Experience}
   \resumeSubHeadingListStart
-    \resumeProjectHeading
-      {\titleItem{{Software Engineer}} $|$ \emph{RealPlus Technology, Taoyuan, Taiwan}}{June 2022 -- Present}
-    \resumeItemListStart
-      \resumeItem{Designed a data pipeline among devices \HL{under ROS} (Robot Operating System) on Jetson Nano }
-      \resumeItem{Enhanced flexibility for secondary development by designing APIs to support variable modes in self-driving car project }
-      \resumeItem{\HL{Increased} lane tracking \HL{accuracy by 20\%} through integration of Gaussian blur and lane prediction algorithm}
-    \resumeItemListEnd
-    \resumeProjectHeading
-      {\titleItem{{Student Researcher}}$|$ \emph{Pattern Recognition Lab}}{June 2020 -- Dec. 2021}
-    \resumeItemListStart
-      \resumeItem{Produced in Using Action Recognition to Crack reCAPTCHA plan, ranked \HL{third place} out of our department}
-      \resumeItem{Built the training environment in \HL{Docker}, \HL{improving} training efficiency by \HL{40\%}}
-      \resumeItem{Qualified with the application fors Undergraduate Research Fellowship authorized by Taiwanese government}
-    \resumeItemListEnd
-    \resumeProjectHeading
-      {\titleItem{{Full-Stack Software Engineer Intern}}$|$ \emph{Taiwan Sustainable Campus Project} }{June 2019 -- June 2020}
-    \resumeItemListStart
-      \resumeItem{Contributed in Taiwanese government project focused on achieving Sustainable Development Goals}
-      \resumeItem{Revamped database to \HL{enhance the accuracy} of hitting information by \HL{20\%} and security of website’s authority using \HL{SQL}}
-      \resumeItem{Developed and implemented new pop-out announcement feature on website using \HL{JavaScript} and \HL{HTML}, enhancing user communication capabilities}
-    \resumeItemListEnd
+    \resumeExpHeading
+      {RealPlus Technology}{Taoyuan, Taiwan}{Software Engineer}{June 2022 -- Present}
+      \resumeItemListStart
+        \resumeItem{Designed a data pipeline among devices \HL{under ROS} (Robot Operating System) on Jetson Nano }
+        \resumeItem{Enhanced flexibility for secondary development by designing APIs to support variable modes in self-driving car project }
+        \resumeItem{\HL{Increased} lane tracking \HL{accuracy by 20\%} through integration of Gaussian blur and lane prediction algorithm}
+      \resumeItemListEnd
+    % Research ML  related
+    % \resumeExpHeading
+    %   {Pattern Recognition Lab}{Taoyuan, Taiwan}{Student Researcher}{June 2020 -- Dec. 2021}
+    %   \resumeItemListStart
+    %     \resumeItem{Produced in Using Action Recognition to Crack reCAPTCHA plan, ranked \HL{third place} out of our department}
+    %     \resumeItem{Built the training environment in \HL{Docker}, \HL{improving} training efficiency by \HL{40\%}}
+    %     \resumeItem{Qualified with the application fors Undergraduate Research Fellowship authorized by Taiwanese government}
+    %   \resumeItemListEnd
+    \resumeExpHeading
+      {Taiwan Sustainable Campus Project}{Taoyuan, Taiwan}{Full-Stack Software Engineer Intern}{June 2019 -- June 2020}
+      \resumeItemListStart
+        \resumeItem{Contributed in Taiwanese government project focused on achieving Sustainable Development Goals}
+        \resumeItem{Revamped database to \HL{enhance the accuracy} of hitting information by \HL{20\%} and security of website’s authority using \HL{SQL}}
+        \resumeItem{Developed and implemented new pop-out announcement feature on website using \HL{JavaScript} and \HL{HTML}, enhancing user communication capabilities}
+      \resumeItemListEnd
   % \resumeProjectHeading
   %     {\titleItem{{Software Engineer Intern}} $|$ \emph{Innovati Inc., Hsinchu, Taiwan}}{June 2018 - Sept. 2018}
   %   \resumeItemListStart
