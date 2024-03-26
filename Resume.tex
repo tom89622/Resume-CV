@@ -25,7 +25,7 @@
 \usepackage{soul}
 \input{glyphtounicode}
 % \usepackage[margin=0.5in]{geometry}
-\usepackage[lmargin=0.5in, rmargin=0.5in, tmargin=0.1in, bmargin=0in]{geometry}
+\usepackage[lmargin=0.5in, rmargin=0.5in, tmargin=0.2in, bmargin=0.2in]{geometry}
 
 %----------FONT OPTIONS----------
 % Sans-serif Fonts
@@ -74,7 +74,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{0pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -285,23 +285,24 @@
     \resumeExpHeading
       {RealPlus Technology}{Taoyuan, Taiwan}{Software Engineer}{June 2022 -- Present}
       \resumeItemListStart
-        \resumeItem{Designed a data pipeline among devices \HL{under ROS} (Robot Operating System) on Jetson Nano }
-        \resumeItem{Enhanced flexibility for secondary development by designing APIs to support variable modes in self-driving car project }
+        \resumeItem{Designed a data pipeline among devices \HL{under ROS} (Robot Operating System) on Jetson Nano}
+        \resumeItem{Built APIs for self-driving car project, enabling flexibility for secondary development}
         \resumeItem{\HL{Increased} lane tracking \HL{accuracy by 20\%} through integration of Gaussian blur and lane prediction algorithm}
       \resumeItemListEnd
     % Research ML  related
-    % \resumeExpHeading
-    %   {Pattern Recognition Lab}{Taoyuan, Taiwan}{Student Researcher}{June 2020 -- Dec. 2021}
-    %   \resumeItemListStart
-    %     \resumeItem{Produced in Using Action Recognition to Crack reCAPTCHA plan, ranked \HL{third place} out of our department}
-    %     \resumeItem{Built the training environment in \HL{Docker}, \HL{improving} training efficiency by \HL{40\%}}
-    %     \resumeItem{Qualified with the application fors Undergraduate Research Fellowship authorized by Taiwanese government}
-    %   \resumeItemListEnd
+    \resumeExpHeading
+      {Pattern Recognition Lab}{Taoyuan, Taiwan}{Student Researcher}{June 2020 -- Dec. 2021}
+      \resumeItemListStart
+        \resumeItem{Produced in Using Action Recognition to Crack reCAPTCHA plan, ranked \HL{third place} out of our department}
+        \resumeItem{Built the training environment in \HL{Docker}, \HL{improving} training efficiency by \HL{40\%}}
+        \resumeItem{Qualified with the application fors Undergraduate Research Fellowship authorized by Taiwanese government}
+      \resumeItemListEnd
     \resumeExpHeading
       {Taiwan Sustainable Campus Project}{Taoyuan, Taiwan}{Full-Stack Software Engineer Intern}{June 2019 -- June 2020}
       \resumeItemListStart
         \resumeItem{Contributed in Taiwanese government project focused on achieving Sustainable Development Goals}
-        \resumeItem{Revamped database to \HL{enhance the accuracy} of hitting information by \HL{20\%} and security of website’s authority using \HL{SQL}}
+        \resumeItem{Revamped database to \HL{enhance the accuracy} of hitting information \HL{by 20\%} and security of website’s authority using \HL{SQL}}
+        % sql infomation
         \resumeItem{Developed and implemented new pop-out announcement feature on website using \HL{JavaScript} and \HL{HTML}, enhancing user communication capabilities}
       \resumeItemListEnd
   % \resumeProjectHeading
@@ -329,7 +330,7 @@
       {\titleItem{Using Action Recognition to Crack reCAPTCHA} $|$ \emph{Python, Computer Vision, Machine Learning}}{Sept. 2020 -- Dec. 2021}
       \resumeItemListStart
         \resumeItem{Designed defense strategy to distinguish between machines and humans when using reCAPTCHA with action}
-        \resumeItem{Generated and classified cropped pictures by designing Machine Learning models using \HL{Transform Learning}\&\HL{Grad-CAM}}
+        \resumeItem{Generated and classified cropped pictures by designing ML models using \HL{Transform Learning}\&\HL{Grad-CAM}}
         \resumeItem{Achieved \HL{accuracies of 98\%, 60\%, and 65\%} for 3 classifications under our best defense approach}
       \resumeItemListEnd
     \resumeProjectHeading
