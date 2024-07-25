@@ -74,7 +74,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{+6pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -92,8 +92,12 @@
 %--------------- Custom commands -----------------------
 
 % Resume Item
+% \newcommand{\HL}[1]{
+%   \textbf{\textcolor{DukeBlue}{#1}}
+% }
+
 \newcommand{\HL}[1]{
-  \textbf{\textcolor{DukeBlue}{#1}}
+  \textbf{\textcolor{black}{#1}}
 }
 
 \newcommand{\namespace}{
@@ -196,10 +200,12 @@
 \begin{center}
     \textbf{\Huge{\center Jen-Hung (Tom) Chang }} \\
     \namespace
-    \href{mailto:tom.jenhungchang@gmail.com}{{\textit{tom.jenhungchang@gmail.com}}} $|$ 
-    \href{https://linkedin.com/in/JenhungChang}{{\textit{linkedin.com/in/JenhungChang}}} $|$
-    \href{https://github.com/tom89622}{{\textit{github.com/tom89622}}}
-    \\\href{https://d3h8gbhbp2l0t0.cloudfront.net}{{\textit{personal website: d3h8gbhbp2l0t0.cloudfront.net}}}
+    % 地址＆電話
+    \href{tel:886983286096}{{\textit{Phone: +886 983-286-096}}} \qquad $|$ 
+    \href{mailto:tom.jenhungchang@gmail.com}{{\textit{EMail: tom.jenhungchang@gmail.com}}} \qquad $|$ 
+    \href{https://linkedin.com/in/JenhungChang}{{\textit{Linkedin: linkedin.com/in/JenhungChang}}}
+    % \href{https://github.com/tom89622}{{\textit{github.com/tom89622}}}
+    % \href{https://d3h8gbhbp2l0t0.cloudfront.net}{{\textit{personal website: d3h8gbhbp2l0t0.cloudfront.net}}}
     \vspace{-8pt}
 \end{center}
 
@@ -225,10 +231,10 @@
 \subheadingtitlevspace
   \begin{itemize}[leftmargin=0in, label={}]
     {\item{
-      \titleItem{Programming Languages}{: C, C++, Java, Python, JavaScript, R, MySQL, JSON, HTML, CSS, Verilog, ARM Assembly} \\
+      \titleItem{Programming Languages}{: C/C++, Java, Python, JavaScript, TypeScript, R, MySQL, GraphQL, JSON, HTML, CSS, Verilog, ARM Assembly, MIPS Assembly, Arduino} \\
       % Bash, Shell Scripts,
-      \titleItem{Libraries and Environment}{: Pytorch, Tensorflow, CUDA, OpenCV, OpenGL, WebGL, Node.js, React} \\
-      \titleItem{DevOps and Tools}{: Git, Docker, AWS (Lightsail, Route 53, Cloudfront), GNU debugger (GDB), REST API} \\
+      \titleItem{Libraries and Environment}{: Pytorch, Tensorflow, CUDA, OpenCV, OpenGL, WebGL, NodeJS, React, NextJS, MongoDB} \\
+      \titleItem{DevOps and Tools}{: Unix, Git, Docker, Hadoop, AWS (Lightsail, EC2, Cloudfront), GNU debugger, REST API, XCode} \\
       % \titleItem{Cloud and Security Tools}{: IBM Cloud, AWS, Azure Cloud, SQL Server, SSIS, SSRS, Linux (Configuring and Managing)} \\
       % \titleItem{Others}{: }
     }}
@@ -283,27 +289,29 @@
 \section{Professional Experience}
   \resumeSubHeadingListStart
     \resumeExpHeading
-      {RealPlus Technology}{Taoyuan, Taiwan}{Software Engineer}{June 2022 -- Present}
+      {RealPlus Technology}{Taoyuan, Taiwan}{Software Engineer}{June 2022 -- June 2024}
       \resumeItemListStart
+        % check the relationship between company and the project description. 
+        \resumeItem{Developed an IoT home automation system for lighting and plant watering to benefit \HL{200+} users}
         \resumeItem{Designed a data pipeline among devices \HL{under ROS} (Robot Operating System) on Jetson Nano}
         \resumeItem{Built APIs for self-driving car project, enabling flexibility for secondary development}
         \resumeItem{\HL{Increased} lane tracking \HL{accuracy by 20\%} through integration of Gaussian blur and lane prediction algorithm}
       \resumeItemListEnd
-    % Research ML  related
+    % Research ML related
     \resumeExpHeading
       {Pattern Recognition Lab}{Taoyuan, Taiwan}{Student Researcher}{June 2020 -- Dec. 2021}
       \resumeItemListStart
         \resumeItem{Produced in Using Action Recognition to Crack reCAPTCHA plan, ranked \HL{third place} out of our department}
         \resumeItem{Built the training environment in \HL{Docker}, \HL{improving} training efficiency by \HL{40\%}}
-        \resumeItem{Qualified with the application fors Undergraduate Research Fellowship authorized by Taiwanese government}
+        \resumeItem{Qualified with the application for Undergraduate Research Fellowship authorized by Taiwanese government}
       \resumeItemListEnd
     \resumeExpHeading
       {Taiwan Sustainable Campus Project}{Taoyuan, Taiwan}{Full-Stack Software Engineer Intern}{June 2019 -- June 2020}
       \resumeItemListStart
         \resumeItem{Contributed in Taiwanese government project focused on achieving Sustainable Development Goals}
-        \resumeItem{Revamped database to \HL{enhance the accuracy} of hitting information \HL{by 20\%} and security of website’s authority using \HL{SQL}}
+        \resumeItem{Revamped \HL{MySQL} database to \HL{enhance hitting accuracy by 20\%} and security of website’s authority}
         % sql infomation
-        \resumeItem{Developed and implemented new pop-out announcement feature on website using \HL{JavaScript} and \HL{HTML}, enhancing user communication capabilities}
+        % \resumeItem{Developed and implemented new pop-out announcement feature on website using \HL{JavaScript} and \HL{HTML}, enhancing user communication capabilities}
       \resumeItemListEnd
   % \resumeProjectHeading
   %     {\titleItem{{Software Engineer Intern}} $|$ \emph{Innovati Inc., Hsinchu, Taiwan}}{June 2018 - Sept. 2018}
@@ -319,15 +327,22 @@
 
  \section{Selective Projects}    
   \resumeSubHeadingListStart
+    % \resumeProjectHeading
+    %   {\titleItem{Personal Website} $|$ \emph{JavaScript, HTML, CSS, React, REST API, AWS (Lightsail, Route 53, Cloudfront)}}{March 2024}
+    %   \resumeItemListStart
+    %     \resumeItem{Constructed and deployed a React website on \HL{AWS Lightsail} for a cost-effective and scalable infrastructure}
+    %     \resumeItem{Implemented dynamic GitHub repositories update using React components via callig \HL{REST API} with Axios}
+    %     % \resumeItem{Developed a user-friendly contact form with form validation to facilitate communication via EmailJS}
+    %   \resumeItemListEnd
     \resumeProjectHeading
-      {\titleItem{Personal Website} $|$ \emph{JavaScript, HTML, CSS, React, REST API, AWS (Lightsail, Route 53, Cloudfront)}}{March 2024}
+      {\titleItem{IoT Home automation} $|$ \emph{JavaScript, Arduino, React, REST API, Docker, AWS EC2, MongoDB}}{Feb. 2024 - June 2024}
       \resumeItemListStart
-        \resumeItem{Constructed and deployed a React website on \HL{AWS Lightsail} for a cost-effective and scalable infrastructure}
-        \resumeItem{Implemented dynamic GitHub repositories update using React components via callig \HL{REST API} with Axios}
-        \resumeItem{Developed a user-friendly contact form with form validation to facilitate communication via EmailJS}
+        \resumeItem{Constructed a \HL{React} website under \HL{NextJS} framework with a \HL{MongoDB} database, enabling user interaction}
+        \resumeItem{Built and deployed an \HL{MQTT broker} and web server using \HL{Docker} on \HL{AWS EC2}}
+        \resumeItem{Implemented login system via calling \HL{self-designed REST API} to achieve user independence}
       \resumeItemListEnd
     \resumeProjectHeading
-      {\titleItem{Using Action Recognition to Crack reCAPTCHA} $|$ \emph{Python, Computer Vision, Machine Learning}}{Sept. 2020 -- Dec. 2021}
+      {\titleItem{Using Action Recognition to Crack reCAPTCHA} $|$ \emph{ Pytorch, Computer Vision, Deep Learning}}{Sept. 2020 -- Dec. 2021}
       \resumeItemListStart
         \resumeItem{Designed defense strategy to distinguish between machines and humans when using reCAPTCHA with action}
         \resumeItem{Generated and classified cropped pictures by designing ML models using \HL{Transform Learning}\&\HL{Grad-CAM}}
@@ -343,7 +358,7 @@
       {\titleItem{FRANCIS Compiler} $|$ \emph{C/C++, \HL{Compiler}}}{Sept. 2020 -- Jan. 2021}
       \resumeItemListStart
         \resumeItem{Designed a compiler for FRANCIS, a high-level language similar to FORTRAN}
-        \resumeItem{Implemented a Lexical Analysis and Syntax Analysis}
+        \resumeItem{Implemented a \HL{Lexical Analysis}, \HL{Syntax Analysis}, \HL{Semantic Analysis}, and \HL{Code Generation}}
         \resumeItem{Generated Intermediate Code by generating 7 tables to address and record identifiers and arrays}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
